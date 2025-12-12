@@ -42,22 +42,22 @@ async function main() {
 
     // 3. Construct the prompt
     // We construct a structured prompt to guide the model
-    let constructedPrompt = `Task: ${prompt}\n\n`;
+    let constructedPrompt = `Task:\n${prompt}\n\n`;
 
+    let ks = ''
     if (finalKnowledgeSources && finalKnowledgeSources.length > 0) {
-      let ks = ''
       for (const k of finalKnowledgeSources) {
         if (fs.existsSync(k)) {
           ks += fs.readFileSync(k, 'utf8') + '\n\n';
         }
       }
-      constructedPrompt += `Knowledge Sources:\n${ks}\n\n`;
     }
+    constructedPrompt += `Knowledge Sources:\n${ks}\n\n`;
 
     constructedPrompt += `Input Data:\n${JSON.stringify(finalInputs, null, 2)}\n\n`;
     
     constructedPrompt += `Please analyze the input data based on the task and knowledge sources.\n`;
-    constructedPrompt += `Return the result strictly in JSON format matching the following structure:\n${JSON.stringify(finalOutputs, null, 2)}`;
+    constructedPrompt += `Return the result strictly in JSON format matching the following structure, if no result found for certain object, its value should be unset:\n${JSON.stringify(finalOutputs, null, 2)}`;
     console.log('[INFO] Constructed Prompt:\n', constructedPrompt);
     console.log('[INFO] Sending request to OpenAI API...');
 
@@ -66,8 +66,6 @@ async function main() {
       messages: [
         { role: "system", content: "You are a helpful assistant designed to output JSON." },
         { role: "user", content: constructedPrompt },
-        { role: "user", content: "Please output the result in JSON format." }
-
       ],
       model: "gpt-5", // Or "gpt-4" if preferred
       response_format: { type: "json_object" }, // Enforce JSON mode

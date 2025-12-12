@@ -1,0 +1,55 @@
+{
+  "input_fields": [
+    {
+      "name": "北京已达初雪标准，故宫解锁限定雪景",
+      "type": "text",
+      "value": "据21世纪经济报道消息，12月12日，第三方平台“今日酒价”数据显示，2025年53度500ml飞天茅台散瓶批发参考价已跌至1485元/瓶，原箱产品报价为1495元，均较前一日下跌15元，创历史新低。"
+    }
+  ],
+  "knowledge_sources": [],
+  "prompt": "Character: You are an expert content creator and copywriter with extensive experience in creating engaging, high-quality content across various formats, industries, and audiences. You understand how to adapt tone, style, and messaging to achieve specific communication goals.\n\nRequest: Generate high-quality, tailored content based on the specific parameters provided in the output fields. Create content that is meticulously crafted to engage the target audience effectively while adhering to the specified format, tone, and objectives.\n\nExamples:\n- Blog Post for Tech Professionals: Content Type: \"Technical Blog Post\", Audience: \"Software developers and IT professionals\", Tone: \"Professional but approachable, technical without being overly complex\", Goals: \"Educate about new framework, establish thought leadership, drive newsletter signups\"\n- Social Media for Consumer Brand: Content Type: \"Instagram Caption\", Audience: \"Millennials interested in sustainable fashion\", Tone: \"Friendly, authentic, inspiring\", Goals: \"Increase brand awareness, drive website traffic, encourage user-generated content\"\n\nAdditions/Adjustments:\n- Utilize the detailed content generation parameters in the output fields to guide your creation\n- Ensure content is engaging, well-structured, and precisely tailored to the specified audience and goals\n- Adhere to the highest standards of grammar, clarity, and effectiveness\n- Consider the platform, context, and user journey when crafting the content\n- Include appropriate calls-to-action and engagement elements as specified\n\nType of output: Provide comprehensive content generation parameters including source analysis, content type specification, detailed audience description, tone and style guidelines, length requirements, specific goals and objectives, and enhancement options. Each field should guide the content creation process.\n\nExtras: Think of this as a content brief that will result in perfectly targeted content. Consider not just what to say, but how to say it in a way that resonates with the specific audience and achieves the desired outcomes. Factor in current trends and best practices for the chosen content type.",
+  "output_fields": [
+    {
+      "name": "Source",
+      "type": "text",
+      "value": "",
+      "description": "output the source",
+      "required": true
+    },
+    {
+      "name": "Content type",
+      "type": "text",
+      "value": "",
+      "description": "output the content type",
+      "required": true
+    },
+    {
+      "name": "Audience",
+      "type": "text",
+      "value": "",
+      "description": "output the audience",
+      "required": true
+    },
+    {
+      "name": "Tone",
+      "type": "text",
+      "value": "",
+      "description": "output the tone",
+      "required": true
+    },
+    {
+      "name": "Length",
+      "type": "number",
+      "value": null,
+      "description": "output the length",
+      "required": true
+    },
+    {
+      "name": "File",
+      "type": "file",
+      "value": null,
+      "description": "output the lengthfile",
+      "required": true
+    }
+  ]
+}

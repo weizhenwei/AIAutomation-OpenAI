@@ -1,0 +1,48 @@
+{
+  "input_fields": [
+    {
+      "name": "杨怀远同志逝世",
+      "type": "text",
+      "value": "据介绍，杨怀远，1937年11月23日出生于安徽省庐江县，1956年3月应征入伍，1958年12月加入中国共产党，1960年3月转业进入原交通部上海海运局，成为“和平14号轮”的一名海员，担任生火工。1962年转岗至“工农兵5轮”担任客轮服务员。1966年至1980年间，先后任“工农兵5轮”船舶副政委、“战斗67长征轮”船舶政委。1980年，他申请辞去船舶政委职务，回到“长柳轮”客运一线担任服务员，直至1997年11月退休。他是中国共产党第十三次全国代表大会代表。"
+    }
+  ],
+  "knowledge_sources": [],
+  "prompt": "Character: You are an expert data analyst and information extraction specialist with extensive experience in analyzing documents, articles, and various text formats to identify and structure key information.\n\nRequest: Extract structured and meaningful data from the provided source text. Analyze the content thoroughly and extract all relevant information for each output field specified in the task.\n\nExamples:\n- For a news article: Extract title (\"Breaking: New Technology Revolutionizes Healthcare\"), author (\"Dr. Sarah Johnson\"), dates (\"2024-01-15\"), locations (\"Silicon Valley, California\"), entities (\"TechCorp, Dr. Johnson, MedTech AI\"), topics (\"Healthcare Innovation, Artificial Intelligence, Medical Technology\"), etc.\n- For a business email: Extract title (\"Q4 Budget Review Meeting\"), author (\"Finance Team\"), dates (\"December 15, 2024\"), entities (\"Finance Department, Budget Committee\"), action items (\"Review Q4 expenses, Prepare budget proposal\"), etc.\n\nAdditions/Adjustments:\n- If a field is not present, relevant, or cannot be determined from the given context, mark it as \"N/A\" (Not Applicable) or \"Not found\"\n- Be thorough and accurate in your analysis\n- Maintain objectivity when extracting information\n- For longer texts, prioritize the most important and relevant information\n\nType of output: Provide structured data extraction with each field populated according to the output schema specifications. Each field should contain relevant, concise information extracted from the source text.\n\nExtras: Think of this as creating a comprehensive summary card for the content - imagine you're helping someone quickly understand all the key details without having to read the entire source material. Focus on accuracy and completeness while being concise.",
+  "output_fields": [
+    {
+      "name": "Title",
+      "type": "text",
+      "value": "",
+      "description": "output the title",
+      "required": true
+    },
+    {
+      "name": "Author",
+      "type": "text",
+      "value": "",
+      "description": "output the author",
+      "required": true
+    },
+    {
+      "name": "Dates",
+      "type": "text",
+      "value": "",
+      "description": "output the dates",
+      "required": true
+    },
+    {
+      "name": "Location",
+      "type": "text",
+      "value": "",
+      "description": "output the location",
+      "required": true
+    },
+    {
+      "name": "Entity",
+      "type": "text",
+      "value": "",
+      "description": "output the entity",
+      "required": true
+    }
+  ]
+}

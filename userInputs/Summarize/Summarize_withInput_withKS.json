@@ -1,0 +1,50 @@
+{
+  "input_fields": [
+    {
+      "name": "北京已达初雪标准，故宫解锁限定雪景",
+      "type": "text",
+      "value": "中国气象频道气象分析师信欣在社交平台介绍，截至今天12时，北京已经有14个国家气象站（佛爷顶、延庆、昌平、斋堂、霞云岭、门头沟、房山、石景山、丰台、海淀、大兴、朝阳、顺义、汤河口）观测到降雪，满足了北京市气象局制订的初雪标准。2025-2026年冬季，北京初雪日为12月12日。较1991-2020年平均初雪日12月3日，迟到了9天。 "
+    }
+  ],
+  "knowledge_sources": [
+    "./userInputs/Summarize/Summarize_KS.txt"
+  ],
+  "prompt": "Character: You are an expert content analyst and summarizer with extensive experience in distilling complex information into clear, structured formats across various content types including news articles, academic papers, business reports, and creative works.\n\nRequest: Create a comprehensive yet concise summary that captures the essence of the provided source text while maintaining its core message and intent. Produce a well-structured, easily digestible summary that serves as a valuable standalone resource.\n\nExamples:\n- For a news article: Headline: \"Tech Giant Launches AI Platform\", Overview: \"Company X announced their new artificial intelligence platform targeting small businesses, featuring automated workflow tools and predictive analytics capabilities\", Key Points: \"• Platform targets SMBs • Includes workflow automation • Features predictive analytics • Available Q2 2024\", etc.\n- For a business report: Headline: \"Q3 Sales Performance Review\", Overview: \"Third quarter results show 15% revenue growth driven by new product launches and expanded market reach\", Key Points: \"• 15% revenue increase • New products driving growth • Market expansion successful • Customer retention up 8%\", etc.\n\nAdditions/Adjustments:\n- Carefully analyze the provided source text and adapt your summarization approach to match the content type, intended audience, and potential use cases\n- Maintain objectivity unless the source text is explicitly opinion-based\n- Use your own words to avoid plagiarism, but include quotation marks for any direct quotes\n- Aim for a summary length of about 25-30% of the original text, unless otherwise specified\n- Tailor the language complexity to match the expected audience\n\nType of output: Provide six structured summary components: headline (5-10 words), overview (2-4 sentences), key points (5-7 bullet points), context (2-3 sentences of background), conclusion (1-2 paragraphs), and tone assessment. Each component should serve a specific purpose in the overall summary.\n\nExtras: Think of this as creating a briefing document for someone who needs to understand the essential information quickly. Your summary should be comprehensive enough to stand alone while being concise enough to save the reader significant time. Consider how different audiences might use this summary.",
+  "output_fields": [
+    {
+      "name": "Headline",
+      "type": "text",
+      "value":  "",
+      "description": "output the headline",
+      "required": true
+    },
+    {
+      "name": "Overview",
+      "type": "text",
+      "value":  "",
+      "description": "output the overview",
+      "required": true
+    },
+    {
+      "name": "Key Points",
+      "type": "text",
+      "value":  "",
+      "description": "output the key points",
+      "required": true
+    },
+    {
+      "name": "Context",
+      "type": "text",
+      "value":  "",
+      "description": "output the context",
+      "required": true
+    },
+    {
+      "name": "Conclusion",
+      "type": "text",
+      "value":  "",
+      "description": "output the conclusion",
+      "required": true
+    }
+  ]
+}

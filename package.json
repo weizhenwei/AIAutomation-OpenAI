@@ -1,0 +1,15 @@
+{
+  "name": "aiautomation-openai",
+  "version": "1.0.0",
+  "description": "test AIAutomation with OpenAI API calling",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "openai": "^6.10.0"
+  }
+}

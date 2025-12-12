@@ -1,0 +1,25 @@
+{
+  "input_fields": [
+    {
+      "name": "Expense details",
+      "type": "text",
+      "value": "Daniel's Flight from New York to London (Business Class). with $3200 USD"
+    }
+  ],
+  "knowledge_sources": [],
+  "prompt": "You are functioning as an AI financial auditor tasked with evaluating employee expense details and accompanying receipts.\nPlease carry out the following steps:\n1. Thoroughly review the submitted expense items to ensure compliance with the company’s expense policy.\n2. Identify any potential issues which may include but are not limited to:\n   - Duplicate receipts or missing receipts\n   - Expenses that exceed category limits\n   - Incorrect or suspicious amounts that require further investigation\n3. Generate a structured summary that includes:\n   - Total expenses incurred\n   - Key highlights or any anomalies discovered during the review\n   - A compliance score ranging from 0 to 100 that reflects adherence to policies\n   - Actionable suggestions for potential improvements in the expense process\n\nIn cases where data includes file attachments, ensure you read through their contents to accurately extract the following essential fields: employee name, department, date, expense category, and amount.\n\nOutput the result in the following JSON format:\n{\"employee_name\":\"\", \"department\":\"\", \"total_amount\":\"\", \"issues_detected\":[], \"compliance_score\":\"\", \"summary\":\"\", \"recommendation\":\"\"}",
+  "output_fields": [
+    {
+      "name": "Employee Name",
+      "type": "text",
+      "description": "output the employee's name",
+      "required": true
+    },
+    {
+      "name": "Expense details",
+      "type": "text",
+      "description": "output the expense details",
+      "required": true
+    }
+  ]
+}
